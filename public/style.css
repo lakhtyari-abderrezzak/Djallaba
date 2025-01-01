@@ -428,6 +428,17 @@ body{
 .header .single-widget.btn{
 	margin-left:0;
 }
+.app-logo{
+	display: flex;
+	align-items: center;
+	gap: 7px ;
+}
+.app-logo h1{
+	font-size: 1.4rem;
+}
+.app-logo span{
+	color: #1a76d1;
+}
 /* Dropdown Menu */
 .header .nav li .dropdown {
 	background: #fff;
@@ -2080,6 +2091,9 @@ body{
 }
 .blog.grid .single-news{
 	margin-top:30px;
+}
+.blog .section-title img{
+	margin : auto ;
 }
 /* Blog Sidebar */
 .main-sidebar {
