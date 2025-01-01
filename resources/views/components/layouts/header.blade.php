@@ -21,16 +21,20 @@
                           <div class="main-menu">
                               <nav class="navigation">
                                   <ul class="nav menu">
-                                      <li class="active"><a href="#">Home <i class="fa-solid fa-down"></i></a>
+                                      <li class="active"><a href="/">Home <i class="fa-solid fa-down"></i></a>
                                       </li>
                                       <li><a href="{{ route('categories.index') }}">Categories</a>
                                           <ul class="dropdown">
-                                              @foreach ($categories as $category)
-											  	<li><a wire:navigate href="{{ route('categories.show', $category->slug) }}">{{ $category->name }} </a></li>
-											  @endforeach
+                                              @if ($categories)
+                                                  @foreach ($categories as $category)
+                                                      <li><a wire:navigate
+                                                              href="{{ route('categories.show', $category->slug) }}">{{ $category->name }}
+                                                          </a></li>
+                                                  @endforeach
+                                              @endif
                                           </ul>
                                       </li>
-                                      <li><a href="#">Services </a></li>
+                                      <li><a href="{{ route('products.index')}}">Products </a></li>
                                       <li><a href="#">Pages <i class="icofont-rounded-down"></i></a>
                                       </li>
                                       <li><a href="contact.html">Contact Us</a></li>
